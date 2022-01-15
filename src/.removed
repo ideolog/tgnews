@@ -1,0 +1,33 @@
+import itertools
+import Levenshtein
+
+                print(file + ': ' + article['title'])
+                print('Общество на {} %'.format(is_society))
+                print(article['txt'])
+                print()
+                print('-------------------------------------')
+                print()
+
+
+                   if must_be_printed:
+                        print('Найдены слова: {}'.format(matched_words))
+
+
+    # Get all permutations of length 2
+    # and length 2
+    perm = itertools.combinations(ru_society_articles.keys(), 2)
+
+    # Print the obtained permutations
+    for x, y in list(perm):
+        unsimilarity = Levenshtein.distance(ru_society_articles[x].upper(), ru_society_articles[y].upper())
+        if unsimilarity <1000:
+            print("Similarity: {}:".format(unsimilarity))
+            print(ru_society_articles[x])
+            print(ru_society_articles[y])
+            print('--------------------')
+
+    # By default, 20% of the words must exist in the dictionary file, and
+    # 85% of all the characters in the message must be letters or spaces
+    # (not punctuation or numbers).
+
+    # sim = set(ru_society_articles[x]['w']) & set(ru_society_articles[y]['w'])
